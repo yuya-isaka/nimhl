@@ -1,0 +1,5 @@
+abc = 128;
+def = 64;
+ans = abc + def;
+ans = ans - 32;
+print ans;
