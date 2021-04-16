@@ -95,14 +95,19 @@ proc main() =
   block haribote:
     var semi = getTc(";")
     while len(tc) > i:
+
       if tc[i+1] == getTc("=") and tc[i+3] == semi:
         arg[tc[i]] = arg[tc[i+2]]
+
       elif tc[i+1] == getTc("=") and tc[i+3] == getTc("+") and tc[i+5] == semi:
         arg[tc[i]] = arg[tc[i+2]] + arg[tc[i+4]]
+
       elif tc[i+1] == getTc("=") and tc[i+3] == getTc("-") and tc[i+5] == semi:
         arg[tc[i]] = arg[tc[i+2]] - arg[tc[i+4]]
+
       elif tc[i] == getTc("print") and tc[i+2] == semi:
         echo fmt"{arg[tc[i+1]]}"
+
       else:
         break haribote
 
